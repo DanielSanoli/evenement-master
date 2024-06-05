@@ -18,15 +18,15 @@ public class EventoService {
         return eventoRepository.findAll();
     }
 
-    public Evento getEventById(Long id) {
+    public Evento getEventoById(Long id) {
         return eventoRepository.findById(id).orElse(null);
     }
 
-    public Evento createEvent(Evento event) {
+    public Evento criarEvento(Evento event) {
         return eventoRepository.save(event);
     }
 
-    public Evento updateEvent(Long id, Evento eventDetails) {
+    public Evento updateEvento(Long id, Evento eventDetails) {
         Evento evento = eventoRepository.findById(id).orElse(null);
         if (evento != null) {
             evento.setTitulo(eventDetails.getTitulo());
@@ -38,7 +38,7 @@ public class EventoService {
         return null;
     }
 
-    public void deleteEvent(Long id) {
+    public void deleteEvento(Long id) {
         eventoRepository.deleteById(id);
     }
 }
