@@ -2,6 +2,7 @@ package br.com.evenement.api.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,14 +14,39 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Column(name = "de_titulo")
     private String titulo;
+
+    @Column(name = "de_descricao")
     private String descricao;
+
+    @Column(name = "dt_inicio")
     private LocalDateTime horarioInicio;
+
+    @Column(name = "dt_fim")
     private LocalDateTime horarioFim;
+
+    @Column(name = "de_local")
     private String local;
+
+    @Column(name = "de_organizador")
     private String organizador;
+
+    @Column(name = "is_lembrete")
     private Boolean lembrete;
 
+    public Evento(Long id, String titulo, String descricao, LocalDateTime horarioInicio, LocalDateTime horarioFim,
+    String local, String organizador, Boolean lembrete) {
+        this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.horarioInicio = horarioInicio;
+        this.horarioFim = horarioFim;
+        this.local = local;
+        this.organizador = organizador;
+        this.lembrete = lembrete;
+    }
 
     public Long getId() {
         return this.id;
