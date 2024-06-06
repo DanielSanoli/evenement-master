@@ -2,6 +2,8 @@ package br.com.evenement.api.model;
 
 import java.time.LocalDateTime;
 
+import javax.validation.constraints.NotBlank;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,15 +19,19 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @NotBlank
     @Column(name = "de_titulo")
     private String titulo;
 
+    @NotBlank
     @Column(name = "de_descricao")
     private String descricao;
 
+    @NotBlank
     @Column(name = "dt_inicio")
     private LocalDateTime horarioInicio;
 
+    @NotBlank
     @Column(name = "dt_fim")
     private LocalDateTime horarioFim;
 
