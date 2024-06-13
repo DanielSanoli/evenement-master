@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Inclua o CSS do Bootstrap aqui -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .esqueceu-senha {
+            color: #007bff; /* Cor azul padrão do Bootstrap */
+            font-size: 0.9rem; /* Tamanho menor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-md-6 col-lg-4">
+                <div class="text-center mb-4">
+                    <img src="/frontend/src/img/event-master.png" alt="Logo" style="width: 100px;">
+                </div>
+                <h2 class="text-center mb-4">Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" id="login" placeholder="Digite seu login">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="esqueceu-senha">Esqueceu sua senha?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
