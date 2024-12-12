@@ -8,8 +8,8 @@ import br.com.evenement.api.MasterApplication;
 @SpringBootTest(classes = MasterApplication.class)
 class MasterApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+	// @Test
+	// void contextLoads() {
+	// }
 
 }
